@@ -24,10 +24,10 @@ import boto3
 from tweepy import OAuthHandler
 
 twitter_keys = {
-    'consumer_key': 'eGyhuOTefIGDR86YnnJ6zHFwd',
-    'consumer_secret': '8NTDVDA1nePi8C7Wt8YpOk0ps0FLSUQCAWQTjl1ntiaLarcgHH',
-    'access_token_key': '709521801748070400-C00ITmfQE9o30yNo4DddjZ6XBxtYq0j',
-    'access_token_secret': '80e7uMQ8WP8BVz3ZWlA3sCcyOqIz8LO73p7RTVC2dexkv'
+    'consumer_key': 'colar suas chaves',
+    'consumer_secret': 'colar suas chaves',
+    'access_token_key': 'colar suas chaves',
+    'access_token_secret': 'colar suas chaves'
 
 }
 
