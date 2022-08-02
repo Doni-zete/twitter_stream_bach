@@ -14,46 +14,48 @@ def trata_dados_twitter(data_source, output_uri):
     with SparkSession.builder.appName("Trata dados vindo do Twitter").getOrCreate() as spark:
         # Load the restaurant violation CSV data
         if data_source is not None:
-            df = spark.read.options(
-                delimiter=";", header=True, quote="\"", escape="\"").csv(data_source)
+            df = spark.read.options(multiline=True).json(data_source)
 
             icon_positivo = [":D", ":)", ":]"]
             icon_negativo = [":(", ":[", ":["]
 
             df = df\
                 .select(
+                   
                     df['id'],
-                    df['tweet_text'],
+                    df['full_text'].alias('tweet_text'),
+                    df['source'].alias('origem_dispositivo'),
+                    df['retweet_count'].alias('numero_retweet'),
 
 
 
                     F.date_format(F.to_timestamp(
-                        df['tweet_date'], "yyyy-MM-dd HH:mm:ss"), "yyyy/MM/dd HH:mm:ss").alias('tweet_date'),
+                        df['created_at'], "yyyy-MM-dd HH:mm:ss"), "yyyy/MM/dd HH:mm:ss").alias('create_date'),
 
-                    F.when(df['tweet_text'].contains(
+                    F.when(df['full_text'].contains(
                         icon_positivo[0]) == 'true', "Positivo")
-                    .when(df['tweet_text'].contains(icon_positivo[1]) == 'true', "Positivo")
-                    .when(df['tweet_text'].contains(icon_positivo[2]) == 'true', "Positivo")
-                    .when(df['tweet_text'].contains(icon_negativo[0]) == 'true', "Negativo")
-                    .when(df['tweet_text'].contains(icon_negativo[1]) == 'true', "Negativo")
-                    .when(df['tweet_text'].contains(icon_negativo[2]) == 'true', "Negativo")
+                    .when(df['full_text'].contains(icon_positivo[1]) == 'true', "Positivo")
+                    .when(df['full_text'].contains(icon_positivo[2]) == 'true', "Positivo")
+                    .when(df['full_text'].contains(icon_negativo[0]) == 'true', "Negativo")
+                    .when(df['full_text'].contains(icon_negativo[1]) == 'true', "Negativo")
+                    .when(df['full_text'].contains(icon_negativo[2]) == 'true', "Negativo")
                     .otherwise("Neutro")
                     .alias("Sentimento"),
 
-                    F.when(df['tweet_text'].contains(
+                    F.when(df['full_text'].contains(
                         icon_positivo[0]) == 'true', icon_positivo[0])
-                    .when(df['tweet_text'].contains(icon_positivo[1]) == 'true', icon_positivo[1])
-                    .when(df['tweet_text'].contains(icon_positivo[2]) == 'true', icon_positivo[2])
-                    .when(df['tweet_text'].contains(icon_negativo[0]) == 'true', icon_negativo[0])
-                    .when(df['tweet_text'].contains(icon_negativo[1]) == 'true', icon_negativo[1])
-                    .when(df['tweet_text'].contains(icon_negativo[2]) == 'true', icon_negativo[2])
+                    .when(df['full_text'].contains(icon_positivo[1]) == 'true', icon_positivo[1])
+                    .when(df['full_text'].contains(icon_positivo[2]) == 'true', icon_positivo[2])
+                    .when(df['full_text'].contains(icon_negativo[0]) == 'true', icon_negativo[0])
+                    .when(df['full_text'].contains(icon_negativo[1]) == 'true', icon_negativo[1])
+                    .when(df['full_text'].contains(icon_negativo[2]) == 'true', icon_negativo[2])
                     .otherwise("Neutro")
                     .alias("Simbolo")
 
                 )\
                 # .show(10)
 
-            df.write.options(delimiter=";", header=True, quote="\"", escape="\"").mode(
+            df.write.options(multiline=True).mode(
                 "overwrite").parquet(output_uri)
 
 
