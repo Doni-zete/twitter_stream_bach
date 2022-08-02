@@ -1,0 +1,15 @@
+
+--------------COMANDO PARA EXECUTAR NA MAQUINA LOCAL PARA FINS DE TESTE----------------------
+#COPIAR O COMANDO E COLAR NO TERMINAL
+/bin/python3 /home/doni/Documents/meu-codigo/twitteer_eleicoes2018.py --data_source /home/doni/Documents/meu-codigo/tweet_create_date2018.csv --output_uri /home/doni/Documents/meu-codigo/transformado/tweet_create_date2018.csv
+
+/bin/python3 /home/doni/Documents/meu-codigo/twitteer_eleicoes2018.py --data_source /home/doni/Documents/meu-codigo/tweet_create_date2018_compontovirgula.csv --output_uri /home/doni/Documents/meu-codigo/transformado/tweet_create_date2018.csv
+----------------------------------------------------------------------------------------------------------
+
+-------------COMANDOS PARA COLOCAR NO Arguments------------------
+#COPIAR O COMANDO E COLAR NO ARGUMENTS
+#COMANDO PARA EXECUTAR NO AWS EMR, SÓ SUBSTITUIR PELO BUCKET QUE ESTA O ARQUIVO DE ENTRADA .CSV
+--data_source s3://DOC-EXAMPLE-BUCKET/food_establishment_data.csv
+#COMANDO PARA EXECUTAR NO AWS EMR, SÓ SUBSTITUIR PELO BUCKET QUE ESTA SERA O BUCKET DE SAIDA
+--output_uri s3://DOC-EXAMPLE-BUCKET/myOutputFolder						
+-----------------------------------------------------------------------------------
