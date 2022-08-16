@@ -16,7 +16,7 @@
 
 
 # Passo 1
-![Glue-job](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/job1.PNG)
+![Glue-job](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/job1.PNG)
 # Passo 2
 ![Glue-job-passo2](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/job2.PNG)
 # Passo 3
