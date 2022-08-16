@@ -31,16 +31,16 @@
 ### [**Referência**](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-libraries.html)
 ### [**Bibliotecas que ja vem instaladas**](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-libraries.html#glue20-modules-provided)
 
-![Glue-job-passo6](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/job_amais_IMPORTANTE.PNG)
+![Glue-job-passo6](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/job_amais_IMPORTANTE.PNG)
 
 
 # Visualização dos detalhes jobs
-![Glue-job-passo7](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/detalhes.PNG)
+![Glue-job-passo7](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/detalhes.PNG)
 
 # Configurando disparador schedule a cada 15 minutos
-![Glue-job-passo8](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/configurando_disparador_schedule_a_cada15.PNG)
+![Glue-job-passo8](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/configurando_disparador_schedule_a_cada15.PNG)
 
 # Recebendo json do twitter em tempo real a cada 15 minutos
-![Glue-job-passo9](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/dados-atualizando-acada10minutos.PNG)
+![Glue-job-passo9](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/dados-atualizando-acada10minutos.PNG)
 
 
