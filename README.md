@@ -18,13 +18,13 @@
 # Passo 1
 ![Glue-job](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/job1.PNG)
 # Passo 2
-![Glue-job-passo2](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/job2.PNG)
+![Glue-job-passo2](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/job2.PNG)
 # Passo 3
-![Glue-job-passo3](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/job3.PNG)
+![Glue-job-passo3](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/job3.PNG)
 # Passo 4
-![Glue-job-passo4](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/job4.PNG)
+![Glue-job-passo4](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/job4.PNG)
 # Passo 5
-![Glue-job-passo5](https://github.com/Doni-zete/python_compasso/blob/main/execucao_aws/img-configuracao-job/job5.PNG)
+![Glue-job-passo5](https://github.com/Doni-zete/twitter_stream_bach/blob/main/img-configuracao-job/job5.PNG)
 
 # Passo 6 a mais importante
 ### O primeiro campo que aparece "key" e para passar o comando o segundo campo "value" e para passar a biblioteca que sera instalada
